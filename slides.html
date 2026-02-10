@@ -655,6 +655,168 @@
     margin: 0 2px;
   }
   .key-hint.dark-text kbd { border-color: rgba(0,0,0,0.12); }
+
+  /* ══════════════════════════════════════════
+     MOBILE RESPONSIVE — max-width: 820px
+     ══════════════════════════════════════════ */
+  @media (max-width: 820px) {
+
+    /* ── Base: allow vertical scroll per slide ── */
+    .slide {
+      overflow-y: auto;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* ── Cover ── */
+    .slide-cover {
+      padding: 0 7vw;
+      justify-content: center;
+    }
+
+    .cover-logo { height: 36px; }
+    .cover-xai { font-size: 15px; padding-bottom: 1px; }
+    .cover-logo-row { gap: 10px; margin-bottom: 28px; }
+    .cover-line { margin-bottom: 18px; }
+    .cover-sub { font-size: 14px; }
+    .cover-product {
+      right: 7vw;
+      width: 100px;
+      opacity: 0.6;
+    }
+
+    /* ── Brand Intro Split → Stack ── */
+    .slide-brand {
+      flex-direction: column;
+    }
+
+    .slide-brand .left {
+      flex: none;
+      padding: 8vh 7vw 4vh;
+    }
+
+    .slide-brand .right {
+      flex: 1;
+      min-height: 35vh;
+    }
+
+    .brand-quote { font-size: 26px; }
+    .brand-body { font-size: 13px; }
+
+    /* ── Grid slides ── */
+    .slide-grid {
+      padding: 4vh 5vw;
+    }
+
+    .grid-header { margin-bottom: 3vh; }
+    .grid-header-num { font-size: 32px; }
+    .grid-header-title { font-size: 14px; }
+
+    .grid-cards {
+      grid-template-columns: 1fr 1fr !important;
+      grid-template-rows: auto !important;
+      gap: 10px;
+    }
+
+    .grid-cards .card {
+      grid-column: auto !important;
+      grid-row: auto !important;
+    }
+
+    .card {
+      padding: 16px;
+      border-radius: 10px;
+    }
+
+    .card-title { font-size: 13px; margin-bottom: 6px; }
+    .card-desc { font-size: 11px; }
+    .card-items li { font-size: 10px; }
+    .card-icon { width: 28px; height: 28px; margin-bottom: 12px; }
+
+    /* ── Split slides → Stack ── */
+    .slide-split {
+      flex-direction: column !important;
+    }
+
+    .split-image {
+      flex: none !important;
+      height: 35vh;
+      min-height: 200px;
+      order: -1;
+    }
+
+    .split-content {
+      flex: 1;
+      padding: 4vh 7vw;
+    }
+
+    .split-content .section-title { font-size: 24px; }
+    .split-content .items-list { margin-top: 20px; gap: 14px; }
+    .item-text-title { font-size: 13px; }
+    .item-text-desc { font-size: 11px; }
+
+    /* ── Section headers ── */
+    .section-tag { font-size: 10px; margin-bottom: 12px; }
+    .section-num { font-size: 80px; }
+
+    /* ── Roadmap ── */
+    .roadmap-phases {
+      grid-template-columns: 1fr !important;
+      gap: 12px;
+    }
+
+    .phase { padding: 20px; }
+    .phase-label { font-size: 10px; }
+    .phase-period { font-size: 11px; margin-bottom: 16px; padding-bottom: 12px; }
+    .phase-items li { font-size: 12px; }
+
+    /* ── Tech stack grid ── */
+    .slide-grid .card div[style*="grid-template-columns"] {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* ── Navigation ── */
+    .nav {
+      bottom: 16px;
+      right: 16px;
+      gap: 10px;
+    }
+
+    .nav-btn { width: 34px; height: 34px; font-size: 14px; }
+    .nav-counter { font-size: 11px; }
+
+    .key-hint { display: none; }
+  }
+
+  /* ══════════════════════════════════════════
+     SMALL MOBILE — max-width: 480px
+     ══════════════════════════════════════════ */
+  @media (max-width: 480px) {
+
+    .slide-cover { padding: 0 6vw; }
+    .cover-logo { height: 30px; }
+    .cover-xai { font-size: 13px; }
+    .cover-product { width: 80px; right: 6vw; }
+
+    .slide-brand .left { padding: 6vh 6vw 3vh; }
+    .brand-quote { font-size: 22px; }
+
+    .slide-grid { padding: 3vh 4vw; }
+
+    .grid-cards {
+      grid-template-columns: 1fr !important;
+    }
+
+    .card { padding: 14px; }
+    .card-title { font-size: 13px; }
+
+    .split-image { height: 28vh; min-height: 160px; }
+    .split-content { padding: 3vh 6vw; }
+    .split-content .section-title { font-size: 21px; }
+
+    .roadmap-phases { gap: 10px; }
+    .phase { padding: 16px; }
+  }
 </style>
 </head>
 <body>
